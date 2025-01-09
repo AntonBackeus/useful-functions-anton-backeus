@@ -15,15 +15,15 @@ def capitalizeAllSentences(string):
     if type(string) == str:
         words = string.strip().split()
         new_string = []
-        sentance = True
+        sentence = True
         for word in words:
-            if sentance:
+            if sentence:
                 new_string.append(word.capitalize())
                 sentance = False
             else:
                 new_string.append(word.lower())
             if word[-1] == ".":
-                sentance = True
+                sentence = True
         return " ".join(new_string)
     else:
         print("capitalizeAllSentences got a non string, please send a string! Returning original value.")
@@ -32,7 +32,7 @@ def capitalizeAllSentences(string):
 
 #Testing all the functions
 def main():
-    testing_string = "tEsTaR hur    dEt gÅr med DeT   HÄR.   Det ÄR lite   TEXt    "
+    testing_string = "tEsTaR hur    dEt gÅr med DeT   HÄR.   Det ÄR lite   TEXt.    "
     testing_number = 4397529
     print(capitalizeAllWords(testing_string))
     print(capitalizeAllWords(testing_number))
